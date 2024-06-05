@@ -21,6 +21,10 @@
 
 `commands` - создание команды для бота.
 
+`callback(call)` - прописание графического интерфейска бота.
+
+`on_click(message)` - прописание поддержки функционалом для графического интерфеса бота.
+
 `CREATE TABLE IF NOT EXISTS users (id int auto_increment primary key, name varchar(50), pass varchar(50))` - создание таблицы с бд.
 
 ## Developers
