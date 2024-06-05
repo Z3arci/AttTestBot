@@ -2,13 +2,13 @@ import telebot
 from telebot import types
 import sqlite3
 
-#Вставка токена
+#Присоединяем токен
 
 bot = telebot.TeleBot('TOKEN')
 
 name = None
 
-#Раздел с коммандами
+#Создаём команды для нашего бота
 
 @bot.message_handler(commands=['start'])
 def start(message):
@@ -65,6 +65,7 @@ def profile(message):
     markup.add(btn3, btn4, btn9)
     bot.send_photo(message.chat.id, file, caption=mess2, reply_markup=markup)
 
+#Прописываем call функции
 
 @bot.callback_query_handler(func=lambda call:True)
 def callback(call):
@@ -135,6 +136,8 @@ def callback(call):
     elif call.data == 'exit':
         bot.send_message(call.message.chat.id, 'В разработке...')
 
+#Прописываем основной графический функционал нашего бота
+
 def on_click(message):
     if message.text == '🌌 Расписание':
         mess1 = (f'Выбирите вашу группу:')
@@ -163,6 +166,7 @@ def on_click(message):
         markup.add(btn3, btn4, btn9)
         bot.send_photo(message.chat.id, file, caption=mess2, reply_markup=markup)
 
+#Регистрация пользователя
 
 @bot.callback_query_handler(func=lambda call:True)
 def user_name(message):
@@ -185,5 +189,6 @@ def user_pass(message):
     markup.add(telebot.types.InlineKeyboardButton('Список пользователей', callback_data='users'))
     bot.send_message(message.chat.id, 'Пользователь зарегистрирован!', reply_markup=markup)
 
+#Делаем так, чтобы бот работал постоянно
 
 bot.polling(none_stop=True)
