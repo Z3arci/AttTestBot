@@ -65,7 +65,7 @@ def profile(message):
     markup.add(btn3, btn4, btn9)
     bot.send_photo(message.chat.id, file, caption=mess2, reply_markup=markup)
 
-#Прописываем call функции
+#Прописываем начинку нашего бота
 
 @bot.callback_query_handler(func=lambda call:True)
 def callback(call):
