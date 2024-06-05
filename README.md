@@ -15,7 +15,7 @@
 
 #### FileBote Structure
 
-`main.py` - основной документ за запуском бота.
+`main.py` - основной документ с запуском бота.
 
 #### Bote Structure
 
