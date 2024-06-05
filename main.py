@@ -2,9 +2,13 @@ import telebot
 from telebot import types
 import sqlite3
 
-bot = telebot.TeleBot('7453226419:AAHa-5qQtGIlt1gnUbDH5ubdEyhoZxFuyS4')
+#Вставка токена
+
+bot = telebot.TeleBot('TOKEN')
 
 name = None
+
+#Раздел с коммандами
 
 @bot.message_handler(commands=['start'])
 def start(message):
