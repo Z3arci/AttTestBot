@@ -21,7 +21,7 @@
 
 `commands` - создание команды для бота.
 
-`CREATE TABLE IF NOT EXISTS users (id int auto_increment primary key, name varchar(50), pass varchar(50))` - создание таблицы с базой данных.
+`CREATE TABLE IF NOT EXISTS users (id int auto_increment primary key, name varchar(50), pass varchar(50))` - создание таблицы с бд.
 
 ## Developers
 
